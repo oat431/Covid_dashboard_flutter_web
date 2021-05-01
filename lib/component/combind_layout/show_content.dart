@@ -14,15 +14,17 @@ class ShowContent extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Container(
-              margin: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width / 3,
-              ),
+              margin: EdgeInsets.all(3),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Content(
                     title: "Confirmed",
                     data: "${snapshot.data.confirmed}",
+                  ),
+                  Content(
+                    title: "New case",
+                    data: "${snapshot.data.newConfirmed}",
                   ),
                   Content(
                     title: "Recovered",

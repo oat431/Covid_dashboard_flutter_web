@@ -11,10 +11,6 @@ class Topbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: GestureDetector(
-        onTap: () => {},
-        child: Icon(Icons.smoke_free),
-      ),
       title: Text(
         title,
         style: TextStyle(

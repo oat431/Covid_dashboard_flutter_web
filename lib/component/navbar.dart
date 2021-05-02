@@ -1,9 +1,14 @@
+import 'dart:js' as js;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Topbar extends StatelessWidget implements PreferredSizeWidget {
   String title;
   Topbar({this.title});
+
+  void jsOpenLink(String url) {
+    js.context.callMethod('openLink', [url, '_blank']);
+  }
 
   @override
   Size get preferredSize => const Size.fromHeight(50);
@@ -20,16 +25,17 @@ class Topbar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         TextButton(
-          onPressed: () => {launch("https://oat431.github.io/")},
+          onPressed: () => {jsOpenLink("https://oat431.github.io/")},
           child: Text('bio'),
         ),
         TextButton(
           onPressed: () =>
-              {launch("https://covid19.th-stat.com/api/open/today")},
+              {jsOpenLink("https://covid19.th-stat.com/api/open/today")},
           child: Text('this api'),
         ),
         TextButton(
-          onPressed: () => {launch("https://covid19.ddc.moph.go.th/th/api")},
+          onPressed: () =>
+              {jsOpenLink("https://covid19.ddc.moph.go.th/th/api")},
           child: Text('all api'),
         ),
       ],

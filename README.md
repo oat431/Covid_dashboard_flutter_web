@@ -18,3 +18,13 @@ This list is api that provided in this project
 - call every provide in thailand
 
 - port this application to moblie
+
+### Terminology
+
+[🔨 update] : modify the file
+
+[🍀 add] : add code to the project
+
+[🍁 delete] : delete code from the project
+
+&copy; Sahachan Tippimwong

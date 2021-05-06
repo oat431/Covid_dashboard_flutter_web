@@ -17,6 +17,7 @@ class ShowContent extends StatelessWidget {
               margin: EdgeInsets.all(3),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Content(
                     title: "Confirmed",
@@ -38,9 +39,12 @@ class ShowContent extends StatelessWidget {
                     title: "Deaths",
                     data: "${snapshot.data.deaths}",
                   ),
-                  Content(
-                    title: "Update At",
-                    data: "${snapshot.data.update}",
+                  Container(
+                    margin: EdgeInsets.all(15),
+                    child: Text(
+                      "Update At ${snapshot.data.update}",
+                      style: TextStyle(fontWeight: FontWeight.w100),
+                    ),
                   ),
                 ],
               ),

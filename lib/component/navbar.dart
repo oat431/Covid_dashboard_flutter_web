@@ -38,7 +38,7 @@ class Topbar extends StatelessWidget implements PreferredSizeWidget {
           child: Text('all api'),
         ),
       ],
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white60,
       elevation: 0,
     );
   }

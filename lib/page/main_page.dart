@@ -21,11 +21,12 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Topbar(
-          title: 'Covid info board with flutter',
-        ),
-        body: ShowContent(
-          future: futureCovid,
-        ));
+      appBar: Topbar(
+        title: 'Covid info board with flutter',
+      ),
+      body: ShowContent(
+        future: futureCovid,
+      ),
+    );
   }
 }

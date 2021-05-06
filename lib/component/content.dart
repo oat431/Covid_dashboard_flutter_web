@@ -7,7 +7,7 @@ class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height / 8,
+      height: MediaQuery.of(context).size.height / 10,
       width: MediaQuery.of(context).size.width / 1.5,
       margin: EdgeInsets.all(15),
       child: Card(
@@ -16,7 +16,7 @@ class Content extends StatelessWidget {
             Radius.circular(25),
           ),
         ),
-        elevation: 1.5,
+        elevation: 6,
         child: Row(
           children: [
             SizedBox(width: 15),
@@ -24,12 +24,20 @@ class Content extends StatelessWidget {
               "$title: ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 30,
+                fontSize: 24,
               ),
             ),
             Text(
               "$data",
-              style: TextStyle(fontSize: 30),
+              style: TextStyle(fontSize: 24),
+            ),
+            Text(
+              " cases",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w100,
+                color: Colors.black.withOpacity(75),
+              ),
             ),
           ],
         ),
